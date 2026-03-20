@@ -4,17 +4,12 @@
     box-sizing: border-box;
 }
 
-body {
+/* ======= ESTILOS LOGIN ======= */
+
+body.pagina-login {
     background-color: #8B0000;
     border: 8px solid black;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedor-principal {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,4 +65,69 @@ body {
     text-align: center;
     margin-bottom: 10px;
     font-weight: bold;
+}
+
+/* INDEX */
+
+body.pagina-index {
+    background-color: #f5f0e8;
+}
+
+.header {
+    background-color: #d4b896;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 3px solid #b8956a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.header-izquierda h1 {
+    color: #3b2a1a;
+    font-size: 22px;
+    margin: 0;
+}
+
+.header-derecha {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-carrito {
+    background-color: #90ee90;
+    color: #1a5c1a;
+    border: 2px solid #4caf50;
+    padding: 8px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-carrito:hover {
+    background-color: #70d470;
+}
+
+.btn-cerrar-sesion {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    padding: 8px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #ffe5e5;
+}
+
+.contenido {
+    padding: 30px;
 }
