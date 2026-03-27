@@ -1,4 +1,4 @@
-// Credenciales quemadas solo para fines educativos
+
 var usuarioCorrecto = "admin";
 var contrasenaCorrecto = "1234";
 
