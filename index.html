@@ -6,21 +6,14 @@
     <title>Take-Fast</title>
     <link rel="icon" type="image/x-icon" href="imagenes/Favicon.ico">
     <link rel="stylesheet" href="Css/styles.css">
+    <script src="js/producto-card.js"></script>
 </head>
 <body class="pagina-index">
 
+    
+    <div id="header"></div>
 
-    <div class="header">
-        <div class="header-izquierda">
-            <h1>Bienvenido A Take-Fast</h1>
-        </div>
-        <div class="header-derecha">
-            <button class="btn-carrito" onclick="abrirCarrito()">🛒 Carrito <span id="contador-carrito">0</span></button>
-            <button class="btn-cerrar-sesion" onclick="cerrarSesion()">Cerrar Sesión</button>
-        </div>
-    </div>
-
-
+    
     <div id="panel-carrito" class="panel-carrito oculto">
         <div class="carrito-header">
             <h3>Tu Carrito</h3>
@@ -35,239 +28,75 @@
         <button class="btn-pagar">Pagar</button>
     </div>
 
-  
-    <div class="contenido">
-        <h2 class="titulo-productos">Nuestros Productos</h2>
-        <h2 class="categorias">Gamer Zone</h2><br>
-        <div class="grid-productos">
+    
+    <template id="plantilla-producto">
+        <div class="tarjeta-producto">
+            <div class="imagen-producto">
+                <img src="" alt="">
+            </div>
+            <p class="nombre-producto"></p>
+            <p class="precio-producto"></p>
+            <div class="acciones-producto">
+                <button class="btn-agregar">Agregar al carrito</button>
+                <input type="number" class="input-cantidad" value="1" min="1">
+            </div>
+        </div>
+    </template>
 
     
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/gamer/Mouse.png" alt="Producto 1">
-                </div>
-                <p class="nombre-producto">Mouse</p>
-                <p class="precio-producto">$100.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Mouse', 10000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
+    <div class="layout-principal">
 
-      
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/gamer/teclado.png" alt="Producto 2">
-                </div>
-                <p class="nombre-producto">Teclado</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Teclado', 15000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
+        
+        <div id="sidebar"></div>
 
+        
+        <div class="zona-contenido">
 
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/gamer/grafica.png" alt="Producto 3">
-                </div>
-                <p class="nombre-producto">Tarjeta Grafica</p>
-                <p class="precio-producto">$1.200.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Tararjeta Grafica', 20000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
+            <h2 class="titulo-productos">Nuestros Productos</h2>
 
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/gamer/case.jpg" alt="Producto 4">
-                </div>
-                <p class="nombre-producto">Case Gamer</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Case', 25000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
+            <h2 class="categorias">Gamer Zone</h2>
+            <div class="grid-productos" id="grid-gamer"></div>
+
+            <h2 class="categorias">Electrodomésticos</h2>
+            <div class="grid-productos" id="grid-electrodomesticos"></div>
+
+            <h2 class="categorias">Aseo</h2>
+            <div class="grid-productos" id="grid-aseo"></div>
+
+            <h2 class="categorias">Deportes</h2>
+            <div class="grid-productos" id="grid-deportes"></div>
+
+            
+            <h2 class="titulo-productos">Destacados con Web Component</h2>
+            <div class="grid-productos">
+                <tarjeta-producto
+                    nombre="Mouse"
+                    precio="$100.000"
+                    imagen="imagenes/gamer/Mouse.png"
+                    descripcion="Mouse gamer de alta precision">
+                </tarjeta-producto>
+
+                <tarjeta-producto
+                    nombre="Licuadora"
+                    precio="$350.000"
+                    imagen="imagenes/electrodomesticos/licuadora.jpg"
+                    descripcion="Licuadora de alta potencia">
+                </tarjeta-producto>
+
+                <tarjeta-producto
+                    nombre="Pelota"
+                    precio="$250.000"
+                    imagen="imagenes/deportes/pelota.jpg"
+                    descripcion="Pelota profesional de futbol">
+                </tarjeta-producto>
             </div>
 
         </div>
     </div>
 
-    <div class="contenido">
-        <h2 class="categorias">Electrodomesticos</h2><br>
-        <div class="grid-productos">
-
     
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/electrodomesticos/licuadora.jpg" alt="Producto 1">
-                </div>
-                <p class="nombre-producto">Licuadora</p>
-                <p class="precio-producto">$350.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Licuadora', 10000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-      
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/electrodomesticos/nevera.jpg" alt="Producto 2">
-                </div>
-                <p class="nombre-producto">Nevera</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Nevera', 15000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/electrodomesticos/microondas.jpg" alt="Producto 3">
-                </div>
-                <p class="nombre-producto">Microondas</p>
-                <p class="precio-producto">$1.200.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Microondas', 20000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/electrodomesticos/lavadora.jpg" alt="Producto 4">
-                </div>
-                <p class="nombre-producto">Lavadora</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Lavadora', 25000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="contenido">
-        <h2 class="categorias">Aseo</h2><br>
-        <div class="grid-productos">
-
-    
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/aseo/cepillo.jpg" alt="Producto 1">
-                </div>
-                <p class="nombre-producto">Cepillo</p>
-                <p class="precio-producto">$100.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Producto 1', 10000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-      
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/aseo/crema.jpg" alt="Producto 2">
-                </div>
-                <p class="nombre-producto">Crema</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('crema', 15000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/aseo/escoba.jpg" alt="Producto 3">
-                </div>
-                <p class="nombre-producto">Escoba</p>
-                <p class="precio-producto">$12.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Escoba', 20000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/aseo/jabon.jpg" alt="Producto 4">
-                </div>
-                <p class="nombre-producto">jabon</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('jabon', 25000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="contenido">
-        <h2 class="categorias">Deportes</h2><br>
-        <div class="grid-productos">
-
-    
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/deportes/cuerda.jpg" alt="Producto 1">
-                </div>
-                <p class="nombre-producto">cuerda</p>
-                <p class="precio-producto">$100.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('cuerda', 10000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-      
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/deportes/pelota.jpg" alt="Producto 2">
-                </div>
-                <p class="nombre-producto">Pelota</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Pelota', 15000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/deportes/silbato.jpg" alt="Silbato">
-                </div>
-                <p class="nombre-producto">Silbato</p>
-                <p class="precio-producto">$1.200.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Silbato', 20000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-            <div class="tarjeta-producto">
-                <div class="imagen-producto">
-                    <img src="imagenes/deportes/termo.jpg" alt="Producto 4">
-                </div>
-                <p class="nombre-producto">Termo</p>
-                <p class="precio-producto">$250.000</p>
-                <div class="acciones-producto">
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Termo', 25000, this)">Agregar al carrito</button>
-                    <input type="number" class="input-cantidad" value="1" min="1">
-                </div>
-            </div>
-
-        </div>
-    </div>
+    <div id="footer"></div>
 
     <script src="js/main.js"></script>
-
 </body>
 </html>

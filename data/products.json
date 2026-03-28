@@ -1,0 +1,114 @@
+[
+    {
+        "nombre": "Mouse",
+        "precio": 100000,
+        "precioTexto": "$100.000",
+        "imagen": "imagenes/gamer/Mouse.png",
+        "categoria": "gamer"
+    },
+    {
+        "nombre": "Teclado",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/gamer/teclado.png",
+        "categoria": "gamer"
+    },
+    {
+        "nombre": "Tarjeta Grafica",
+        "precio": 1200000,
+        "precioTexto": "$1.200.000",
+        "imagen": "imagenes/gamer/grafica.png",
+        "categoria": "gamer"
+    },
+    {
+        "nombre": "Case Gamer",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/gamer/case.jpg",
+        "categoria": "gamer"
+    },
+    {
+        "nombre": "Licuadora",
+        "precio": 350000,
+        "precioTexto": "$350.000",
+        "imagen": "imagenes/electrodomesticos/licuadora.jpg",
+        "categoria": "electrodomesticos"
+    },
+    {
+        "nombre": "Nevera",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/electrodomesticos/nevera.jpg",
+        "categoria": "electrodomesticos"
+    },
+    {
+        "nombre": "Microondas",
+        "precio": 1200000,
+        "precioTexto": "$1.200.000",
+        "imagen": "imagenes/electrodomesticos/microondas.jpg",
+        "categoria": "electrodomesticos"
+    },
+    {
+        "nombre": "Lavadora",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/electrodomesticos/lavadora.jpg",
+        "categoria": "electrodomesticos"
+    },
+    {
+        "nombre": "Cepillo",
+        "precio": 100000,
+        "precioTexto": "$100.000",
+        "imagen": "imagenes/aseo/cepillo.jpg",
+        "categoria": "aseo"
+    },
+    {
+        "nombre": "Crema",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/aseo/crema.jpg",
+        "categoria": "aseo"
+    },
+    {
+        "nombre": "Escoba",
+        "precio": 12000,
+        "precioTexto": "$12.000",
+        "imagen": "imagenes/aseo/escoba.jpg",
+        "categoria": "aseo"
+    },
+    {
+        "nombre": "Jabon",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/aseo/jabon.jpg",
+        "categoria": "aseo"
+    },
+    {
+        "nombre": "Cuerda",
+        "precio": 100000,
+        "precioTexto": "$100.000",
+        "imagen": "imagenes/deportes/cuerda.jpg",
+        "categoria": "deportes"
+    },
+    {
+        "nombre": "Pelota",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/deportes/pelota.jpg",
+        "categoria": "deportes"
+    },
+    {
+        "nombre": "Silbato",
+        "precio": 1200000,
+        "precioTexto": "$1.200.000",
+        "imagen": "imagenes/deportes/silbato.jpg",
+        "categoria": "deportes"
+    },
+    {
+        "nombre": "Termo",
+        "precio": 250000,
+        "precioTexto": "$250.000",
+        "imagen": "imagenes/deportes/termo.jpg",
+        "categoria": "deportes"
+    }
+]
